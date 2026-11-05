@@ -1,4 +1,3 @@
-Python
 import csv
 import os
 
