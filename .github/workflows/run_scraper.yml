@@ -5,6 +5,10 @@ on:
     - cron: '0 0 * * *'
   workflow_dispatch:
 
+# 1. 明確授權 GitHub Actions 具有寫入專案的權限
+permissions:
+  contents: write
+
 jobs:
   run:
     runs-on: ubuntu-latest
@@ -30,5 +34,6 @@ jobs:
           git config --global user.name "GitHub Actions Bot"
           git config --global user.email "actions@github.com"
           git add data.csv
-          git commit -m "Auto-update scraped data.csv [skip ci]" || echo "No changes to commit"
-          git push
+          
+          # 2. 檢查是否有檔案變更，有才進行 Commit 與 Push
+          git diff --staging --quiet || (git commit -m "Auto-update scraped data.csv [skip ci]" && git push)
