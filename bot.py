@@ -2,7 +2,7 @@ import csv
 import os
 from playwright.sync_api import sync_playwright
 
-url = "https://facebook.com/sanyeminhgao"
+url = "https://www.facebook.com/sanyeminhgao"
 scraped_content = ""
 scraped_date = "2026-11-05"
 
