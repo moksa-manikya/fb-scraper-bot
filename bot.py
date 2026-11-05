@@ -4,7 +4,7 @@ from bs4 import BeautifulSoup
 import requests
 
 # 1. 設定要爬取的目標網頁網址 (這裡以範例公開網站為例)
-url = "https://facebook.com/sanyeminhgao/"  # 請替換成你想抓取的真實網頁網址
+url = "https://facebook.com/sanyeminhgao"  # 請替換成你想抓取的真實網頁網址
 
 # 2. 發送 HTTP 請求取得網頁內容
 headers = {
