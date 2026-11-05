@@ -1,4 +1,3 @@
-YAML
 name: Scraper and Auto-Commit CSV
 
 on:
